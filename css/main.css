@@ -179,7 +179,7 @@ o888o o888o o888o `Y888""8o o888o o888o o888o
     white-space: pre;
     position: absolute;
     bottom: 0;
-    width: calc(100vw - 50px);
+    width: calc(100vw - 100px);
     left: 50%;
     transform: translate(-50%, -50%);
     height: auto;
