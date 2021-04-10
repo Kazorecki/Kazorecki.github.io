@@ -179,11 +179,11 @@ o888o o888o o888o `Y888""8o o888o o888o o888o
     white-space: pre;
     position: absolute;
     bottom: 0;
-    width: calc(100vw - 100px);
+    width: calc(100vw - 50px);
     left: 50%;
     transform: translate(-50%, -50%);
     height: auto;
-    padding: 1em;
+    padding: 1em 0;
     text-align: center;
     background-color: #f1c40f;
     text-decoration: underline;
