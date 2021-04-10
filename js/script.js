@@ -4,7 +4,7 @@ window.onload = function () {
     })
     window.setInterval(() => {
         document.querySelector("#loader").classList.add("hide");
-    }, 00);
+    }, 4000);
     document.querySelectorAll(".animBlockReveal").forEach((obj, i) => {
         obj.style.animationDelay = 2 + 0.1 * i + "s";
     })
