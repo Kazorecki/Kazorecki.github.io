@@ -1,0 +1,9 @@
+<svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="skillChart">
+<rect width="150" height="150" fill="white"/>
+<path id="triangle1" d="M75 0L139.952 112.5H10.0481L75 0Z" fill="#4A4A4A"/>
+<path id="triangle2" d="M75.5 26L118.368 100.25H32.6317L75.5 26Z" fill="#C4C4C4"/>
+<path id="triangle3" d="M76 51L97.6506 88.5H54.3494L76 51Z" fill="white"/>
+<path id="Vector 1" d="M10.5 112.5L75.5 25.5L97.5 88.5L10.5 112.5Z" stroke="black"/>
+</g>
+</svg>

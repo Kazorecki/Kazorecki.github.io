@@ -1,0 +1,70 @@
+/* ///////////////////////////////////////////////// */
+
+div.btn.foo {
+    color: #eee;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    filter: drop-shadow(0 0 3px #000);
+    
+}
+
+.btn.foo .innerFoo {
+    max-width: 0;
+    overflow: hidden;
+    color: var(--mainColor);
+    font-style: italic;
+    display: inline-block;
+    vertical-align: top;
+    transition: 1s;
+    opacity: 0;
+    
+}
+
+div.btn.foo::after{
+    content: "";
+    display: block;
+    height: 5px;
+    background: url("../images/svg/wavyLine.svg");
+    background-size: contain;
+}
+div.btn.foo.hideUnderline:hover::after{
+    height: 0;
+}
+.btn.foo:hover .innerFoo {
+    max-width: 999px;
+    opacity: 1;
+}
+
+
+/* //////////////////////////////////////////////////// */
+
+div.btn.foo div.dropdown{
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 0;
+    max-width: 0;
+    overflow: hidden;
+    transition: 1s;
+    max-height: 0;
+}
+
+
+
+
+
+div.btn.foo:hover div.dropdown{
+    padding-left: 2em;
+    display: block;
+    max-width: 999px;
+    max-height: 3em;
+}
+
+/* /////////////////////////////////////////////////// */
+
+div.btn .mainColor {
+    color: var(--mainColor);
+}
+
+
+

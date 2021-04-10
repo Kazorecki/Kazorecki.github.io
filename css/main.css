@@ -1,0 +1,151 @@
+@font-face {
+    font-family: 'dpcomicregular';
+    src: url('../fonts/dpcomic-webfont.woff2') format('woff2'), url('../fonts/dpcomic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'joystixmonospace';
+    src: url('../fonts/joystix_monospace-webfont.woff2') format('woff2'), url('../fonts/joystix_monospace-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/*
+                                                              oooo  
+                                                              `888  
+ .oooooooo  .ooooo.  ooo. .oo.    .ooooo.  oooo d8b  .oooo.    888  
+888' `88b  d88' `88b `888P"Y88b  d88' `88b `888""8P `P  )88b   888  
+888   888  888ooo888  888   888  888ooo888  888      .oP"888   888  
+`88bod8P'  888    .o  888   888  888    .o  888     d8(  888   888  
+`8oooooo.  `Y8bod8P' o888o o888o `Y8bod8P' d888b    `Y888""8o o888o 
+d"     YD                                                           
+"Y88888P'                                                           
+                                                                    */
+
+
+
+:root {
+    
+}
+
+html{
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #111;
+    font-family: "Fira Code";
+    color: #eee;
+    display: grid;
+    justify-items: center;
+}
+
+.child{
+    height: 100vh;
+    scroll-snap-align: start;
+    margin: 10vh 0;
+}
+
+.scrollSnap{
+    scroll-snap-align: start;
+}
+.paddingSmall{
+    padding: 10px;
+}
+.paddingMedium{
+    padding: 20px;
+}
+.paddingLarge{
+    padding: 30px;
+}
+/*
+oooo                                  .o8                     
+`888                                 "888                     
+ 888 .oo.    .ooooo.   .oooo.    .oooo888   .ooooo.  oooo d8b 
+ 888P"Y88b  d88' `88b `P  )88b  d88' `888  d88' `88b `888""8P 
+ 888   888  888ooo888  .oP"888  888   888  888ooo888  888     
+ 888   888  888    .o d8(  888  888   888  888    .o  888     
+o888o o888o `Y8bod8P' `Y888""8o `Y8bod88P" `Y8bod8P' d888b    
+                                                              */
+
+.navbarOffset{
+    height: 50px;
+}
+.menu{
+    display: grid;
+    width: calc( 100% - 100px);
+    grid-template-columns: auto 1fr auto;
+    place-items: center;
+    grid-template-rows: 1fr;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 10px 50px;
+    z-index: 666;
+    backdrop-filter: blur(5px) saturate(120%);
+    height: 50px;
+}
+.menu #menuBtn{
+    grid-column-end: -1;
+}
+.menu [for="menuBtn"]{
+    grid-column-end: -1;
+    width: 50px;
+}
+.menu ul{
+    display: grid;
+    grid-template-columns: auto 1fr auto auto auto;
+    place-items: center;
+    justify-items: right;
+    padding: 0;
+    margin: 32px;
+    /* grid-column: 2/3;
+    grid-row: 1/2; */
+}
+.menu ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0px 32px;
+}
+.menu #menuBtn{
+    display: none;
+}
+.menu #menuLogo img{
+    width: 50px;
+    filter: invert(1);
+}
+
+
+
+/*
+                             o8o              
+                             `"'              
+ooo. .oo.  .oo.    .oooo.   oooo  ooo. .oo.   
+`888P"Y88bP"Y88b  `P  )88b  `888  `888P"Y88b  
+ 888   888   888   .oP"888   888   888   888  
+ 888   888   888  d8(  888   888   888   888  
+o888o o888o o888o `Y888""8o o888o o888o o888o 
+                                              
+                                              
+                                              */
+.main{
+    display: grid;
+    place-items: center;
+    margin: 0;
+    width: 50%;
+}
+.hpTitle{
+    font-size: 2em;
+    font-family: "Fira Code";
+}
+.center{
+    display: grid;
+    place-items: center;
+}

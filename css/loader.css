@@ -1,0 +1,37 @@
+#loader{
+    height: 100vh; width: 100%;
+    background: #111;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    text-align: center;
+    font-family: "dpcomicregular";
+    font-size: 2em;
+    position: fixed;
+    top: 0;
+    transition: 1s;
+    z-index: 999;
+}
+#loader > div{
+    display: grid;
+    place-items: center;
+}
+#loader.hide{
+    top: -100vh;
+}
+#loader h1 span{
+    position: relative;
+    animation: loaderDrop 1s  cubic-bezier(0.0, 0.3, 1.0, 1.0) infinite;
+    transform: translateY(0px);
+    display: inline-block;
+}
+
+@keyframes loaderDrop {
+    from{
+        transform: translateY(-50px);
+        opacity: 0;
+    }to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
