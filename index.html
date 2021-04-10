@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./fonts/Fira_Code_v5.2/fira_code.css">
     <link rel="stylesheet" href="./css/colors.css">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/hvrs.css">
     <link rel="stylesheet" href="./css/anim.css">
     <link rel="stylesheet" href="./css/loader.css">
     <link rel="stylesheet" href="./css/btns.css">
@@ -34,10 +35,8 @@
         </div>
     </div>
 
-
-
-
-    <div class="navbarOffset scrollSnap"></div>
+    <div class="snapContainer">
+        <div class="navbarOffset scrollSnap"></div>
     <header class="menu">
         <input type="checkbox" id="menuBtn">
         <label for="menuBtn"></label>
@@ -88,7 +87,7 @@
 <span class="animBlockReveal"><span style="--color: #2980b9"><span class="animGlow">class</span></span> <span style="--color: var(--mainColor)"><span class="animGlow">yourNewFrontDev</span></span> = {</span>
     <span class="animBlockReveal">constructor(yourCompany){</span>
         <span class="animBlockReveal">me = {</span>
-            <span class="animBlockReveal">age = <span id="age"></span></span>
+            <span class="animBlockReveal">this.age = <span id="age"></span></span>
         <span class="animBlockReveal">}</span>
         <span class="animBlockReveal">yourCompany += me;</span>
     <span class="animBlockReveal">}</span>
@@ -99,49 +98,69 @@
 
 
 
-    <div class="child main" style="grid-template-columns: auto 1fr;">
+    <div class="child main todo" style="grid-template-columns: auto 1fr;">
         <div class="center">
-            <a href="" class="paddingLarge">
-                <div class="btn foo">
-                    <span>.</span>
-                    <span>skill</span>
-                    <span>(</span>
-                    <span class="innerFoo">html</span>
-                    <span>)</span>
-                    =>
-                </div>
-            </a>
-            <a href="" class="paddingLarge">
-                <div class="btn foo">
-                    <span>.</span>
-                    <span>skill</span>
-                    <span>(</span>
-                    <span class="innerFoo">css</span>
-                    <span>)</span>
-                    =>
-                </div>
-            </a>
-            <a href="" class="paddingLarge">
-                <div class="btn foo">
-                    <span>.</span>
-                    <span>skill</span>
-                    <span>(</span>
-                    <span class="innerFoo">JS</span>
-                    <span>)</span>
-                    =>
-                </div>
-            </a>
+
+            <div class="btn foo paddingLarge" id="skillHTML">
+                <span>.</span>
+                <span>skill</span>
+                <span>(</span>
+                <span class="innerFoo">html</span>
+                <span>)</span>
+                =>
+            </div>
+
+
+            <div class="btn foo paddingLarge" id="skillCSS">
+                <span>.</span>
+                <span>skill</span>
+                <span>(</span>
+                <span class="innerFoo">css</span>
+                <span>)</span>
+                =>
+            </div>
+
+
+            <div class="btn foo paddingLarge" id="skillJS">
+                <span>.</span>
+                <span>skill</span>
+                <span>(</span>
+                <span class="innerFoo">JS</span>
+                <span>)</span>
+                =>
+            </div>
+
         </div>
         <div class="center">
-            <svg width="131" height="114" viewBox="0 0 131 114" fill="none" xmlns="http://www.w3.org/2000/svg" id="skillChart">
-                <path d="M66 0L130.952 112.5H1.0481L66 0Z" fill="#4A4A4A" id="skillChartTriangle1"/>
-                <path d="M66.5 26L109.368 100.25H23.6317L66.5 26Z" fill="#C4C4C4" id="skillChartTriangle2"/>
-                <path d="M67 51L88.6506 88.5H45.3494L67 51Z" fill="white" id="skillChartTriangle3"/>
-                <polygon points="0,114  65.5,28 " stroke="black" stroke-width="3" id="skillChartStroke"/>
+            <svg width="150" height="150" viewBox="0 0 131 114" fill="none" xmlns="http://www.w3.org/2000/svg"
+                id="skillChart">
+                <path d="M66 0L130.952 112.5H1.0481L66 0Z" fill="#4A4A4A" id="skillChartTriangle1" />
+                <path d="M66.5 26L109.368 100.25H23.6317L66.5 26Z" fill="#C4C4C4" id="skillChartTriangle2" />
+                <path d="M67 51L88.6506 88.5H45.3494L67 51Z" fill="white" id="skillChartTriangle3" />
+                <polygon points="3,111  66.5,28 90,89" stroke="black" stroke-width="3" id="skillChartStroke" />
             </svg>
-                
+
         </div>
     </div>
+    <div class="main child todo "  data-todo="Change HTML CSS JS to icons">
+        <div>
+            <h2 class="charBefore textCenter" data-char="<h1>">
+                What you just saw is my representation of skills in:
+                <br>
+                <span  style="color: #e67e22">HTML</span>
+                <span  style="color: #f1c40f">JS</span>
+                <span  style="color: #2980b9">CSS</span>;
+            </h2>
+            <p class="textCenter">
+                It may look like I'm bad at some things, but don't worry, I learn quickly and willingfully!! <br>
+                Also I lied to you...Behind this text in background is written "&lt;h1&gt;" but it's actually &lt;h2&gt;... Sorry for that one! Like, for real!
+            </p>
+        </div>
+    </div>
+    </div>
+
+
+    
 </body>
 
 </html>

@@ -1,0 +1,26 @@
+Left Down{
+    3,111
+}
+Middle Center{
+    66.5,28
+}
+Middle Right{
+    110,100
+}
+
+
+
+HTML{
+    Semantics
+    Planning
+
+}
+
+CSS{
+    Selectors
+    Block Model
+}
+
+JS{
+    
+}

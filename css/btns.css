@@ -6,7 +6,7 @@ div.btn.foo {
     position: relative;
     display: inline-block;
     filter: drop-shadow(0 0 3px #000);
-    
+    cursor: pointer;
 }
 
 .btn.foo .innerFoo {

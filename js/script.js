@@ -15,14 +15,60 @@ window.onload = function () {
     ageSpan.innerHTML = ageDate.getUTCFullYear() - 1970;
 
 
-    // anime({
-    //     targets: "#skillChartStroke",
-    //     points: [
-    //         { value: '1.5 112.5,66.5 25.5,88.5 88.5,1.5 112.5' },
-    //         { value: '1 89,66.5 1.5,131.5 89,66.5,1' },
-    //     ],
-    //     easing: 'easeOutQuad',
-    //     duration: 2000,
-    //     loop: true
-    // })
+    var skillChartAnimation = anime({
+        targets: "#skillChartStroke",
+        points: [
+            { value: '3,111  66.5,28 90,89' },
+            { value: '66.5,28  90,89 3,111' },
+        ],
+        easing: 'easeOutQuad',
+        duration: 2000,
+        loop: true
+    })
+
+
+
+// TODO REMOVE ANIMATION BEFORE STARTING NEXT ONE!!! (causes bugs)
+
+
+
+    document.querySelector("#skillHTML").addEventListener("click",()=>{
+        skillChartAnimation.remove('#skillChartStroke');
+        skillChartAnimation = anime({
+            targets: "#skillChartStroke",
+            points: [
+                { value: '3,111  66.5,28 90,89' },
+                { value: '66.5,28  90,89 3,111' },
+            ],
+            easing: 'easeOutQuad',
+            duration: 2000,
+            loop: true
+        })
+    })
+    document.querySelector("#skillCSS").addEventListener("click",()=>{
+        skillChartAnimation.remove('#skillChartStroke');
+        skillChartAnimation = anime({
+            targets: "#skillChartStroke",
+            points: [
+                { value: '100,111  50.5,28 0,89' },
+                { value: '0,89  100,111 50.5,28' },
+            ],
+            easing: 'easeOutQuad',
+            duration: 2000,
+            loop: true
+        })
+    })
+    document.querySelector("#skillJS").addEventListener("click",()=>{
+        skillChartAnimation.remove('#skillChartStroke');
+        skillChartAnimation = anime({
+            targets: "#skillChartStroke",
+            points: [
+                { value: '100,111  50.5,28 0,89' },
+                { value: '0,89  100,111 50.5,28' },
+            ],
+            easing: 'easeOutQuad',
+            duration: 2000,
+            loop: true
+        })
+    })
 }
