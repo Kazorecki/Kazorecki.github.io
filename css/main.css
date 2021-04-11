@@ -36,9 +36,11 @@ body {
     background: #111;
     font-family: "Fira Code";
     color: #eee;
-    
     overflow: hidden;
+
 }
+
+
 
 .snapContainer{
     display: grid;

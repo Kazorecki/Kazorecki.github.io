@@ -1,0 +1,18 @@
+*{
+    cursor: none !important;
+}
+#cursorCircle{
+    position: absolute;
+    z-index: 99999;
+    transform: translate(-50%,-50%);
+    width: 32px;
+    height: 32px;
+    pointer-events: none;
+    backdrop-filter: invert(1);
+    /* background: #fff; */
+    border-radius: 50%;
+    transition: transform 1s;
+}
+#cursorCircle.cursorScale{
+    transform: translate(-50%,-50%) scale(4);
+}

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>s𝕶ully</title>
     <link rel="stylesheet" href="./fonts/Fira_Code_v5.2/fira_code.css">
+    <link rel="stylesheet" href="./css/cursor.css">
     <link rel="stylesheet" href="./css/colors.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/hvrs.css">
@@ -19,6 +20,14 @@
 
 <body>
 
+    <div id="cursor">
+        <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" id="cursorCircle">
+            <circle cx="50" cy="50" r="47.5" stroke="none" stroke-width="5" />
+        </svg>
+        <!-- <div id="cursorCircle">
+
+        </div> -->
+    </div>
 
 
     <div id="loader">
@@ -37,53 +46,53 @@
 
     <div class="snapContainer">
         <div class="navbarOffset scrollSnap"></div>
-    <header class="menu">
-        <input type="checkbox" id="menuBtn">
-        <label for="menuBtn"></label>
-        <a href="" id="menuLogo">
-            <img src="./images/logo.png" alt="">
-        </a>
-        <ul class="navbarMenu">
-            <li>
-                <a href="">
-                    <div class="btn foo">
-                        <span>.</span>
-                        <span>is</span>
-                        <span>(</span>
-                        <span class="innerFoo">frontEndDeveloper</span>
-                        <span>)</span>
-                        =>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <div class="btn foo hideUnderline">
-                        <span>.</span>
-                        <span>job</span>
-                        <span>(</span>
-                        <span class="innerFoo">application</span>
-                        <span>)</span>
-                        =>{ <div class="dropdown">
+        <header class="menu">
+            <input type="checkbox" id="menuBtn">
+            <label for="menuBtn"></label>
+            <a href="" id="menuLogo">
+                <img src="./images/logo.png" alt="">
+            </a>
+            <ul class="navbarMenu">
+                <li>
+                    <a href="">
+                        <div class="btn foo">
+                            <span>.</span>
+                            <span>is</span>
+                            <span>(</span>
+                            <span class="innerFoo">frontEndDeveloper</span>
+                            <span>)</span>
+                            =>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="btn foo hideUnderline">
+                            <span>.</span>
+                            <span>job</span>
+                            <span>(</span>
+                            <span class="innerFoo">application</span>
+                            <span>)</span>
+                            =>{ <div class="dropdown">
 
-                            <p>
-                                let try = `Underline goes away. Why?
-                                Because hiring me is not a mistake :)`
-                            </p>
+                                <p>
+                                    let try = `Underline goes away. Why?
+                                    Because hiring me is not a mistake :)`
+                                </p>
 
-                        </div> }
-                    </div>
-                </a>
-            </li>
-        </ul>
-    </header>
-    <div class="navbarOffset"></div>
-
-
+                            </div> }
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </header>
+        <div class="navbarOffset"></div>
 
 
-    <div class="child main" style="margin-top: -160px">
-        <pre class="hpTitle">
+
+
+        <div class="child main" style="margin-top: -160px">
+            <pre class="hpTitle">
 <span class="animBlockReveal"><span style="--color: #2980b9"><span class="animGlow">class</span></span> <span style="--color: var(--mainColor)"><span class="animGlow">yourNewFrontDev</span></span> = {</span>
     <span class="animBlockReveal">constructor(yourCompany){</span>
         <span class="animBlockReveal">me = {</span>
@@ -93,74 +102,75 @@
     <span class="animBlockReveal">}</span>
 <span class="animBlockReveal">}</span>
         </pre>
-    </div>
-
-
-
-
-    <div class="child main todo" style="grid-template-columns: auto 1fr;">
-        <div class="center">
-
-            <div class="btn foo paddingLarge" id="skillHTML">
-                <span>.</span>
-                <span>skill</span>
-                <span>(</span>
-                <span class="innerFoo">html</span>
-                <span>)</span>
-                =>
-            </div>
-
-
-            <div class="btn foo paddingLarge" id="skillCSS">
-                <span>.</span>
-                <span>skill</span>
-                <span>(</span>
-                <span class="innerFoo">css</span>
-                <span>)</span>
-                =>
-            </div>
-
-
-            <div class="btn foo paddingLarge" id="skillJS">
-                <span>.</span>
-                <span>skill</span>
-                <span>(</span>
-                <span class="innerFoo">JS</span>
-                <span>)</span>
-                =>
-            </div>
-
         </div>
-        <div class="center">
-            <svg width="150" height="150" viewBox="0 0 131 114" fill="none" xmlns="http://www.w3.org/2000/svg"
-                id="skillChart">
-                <path d="M66 0L130.952 112.5H1.0481L66 0Z" fill="#4A4A4A" id="skillChartTriangle1" />
-                <path d="M66.5 26L109.368 100.25H23.6317L66.5 26Z" fill="#C4C4C4" id="skillChartTriangle2" />
-                <path d="M67 51L88.6506 88.5H45.3494L67 51Z" fill="white" id="skillChartTriangle3" />
-                <polygon points="3,111  66.5,28 90,89" stroke="black" stroke-width="3" id="skillChartStroke" />
-            </svg>
 
+
+
+
+        <div class="child main todo" style="grid-template-columns: auto 1fr;">
+            <div class="center">
+
+                <div class="btn foo paddingLarge" id="skillHTML">
+                    <span>.</span>
+                    <span>skill</span>
+                    <span>(</span>
+                    <span class="innerFoo">html</span>
+                    <span>)</span>
+                    =>
+                </div>
+
+
+                <div class="btn foo paddingLarge" id="skillCSS">
+                    <span>.</span>
+                    <span>skill</span>
+                    <span>(</span>
+                    <span class="innerFoo">css</span>
+                    <span>)</span>
+                    =>
+                </div>
+
+
+                <div class="btn foo paddingLarge" id="skillJS">
+                    <span>.</span>
+                    <span>skill</span>
+                    <span>(</span>
+                    <span class="innerFoo">JS</span>
+                    <span>)</span>
+                    =>
+                </div>
+
+            </div>
+            <div class="center">
+                <svg width="150" height="150" viewBox="0 0 131 114" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    id="skillChart">
+                    <path d="M66 0L130.952 112.5H1.0481L66 0Z" fill="#4A4A4A" id="skillChartTriangle1" />
+                    <path d="M66.5 26L109.368 100.25H23.6317L66.5 26Z" fill="#C4C4C4" id="skillChartTriangle2" />
+                    <path d="M67 51L88.6506 88.5H45.3494L67 51Z" fill="white" id="skillChartTriangle3" />
+                    <polygon points="3,111  66.5,28 90,89" stroke="black" stroke-width="3" id="skillChartStroke" />
+                </svg>
+
+            </div>
+        </div>
+        <div class="main child todo " data-todo="Change HTML CSS JS to icons">
+            <div>
+                <h2 class="charBefore textCenter" data-char="<h1>">
+                    What you just saw is my representation of skills in:
+                    <br>
+                    <span style="color: #e67e22">HTML</span>
+                    <span style="color: #f1c40f">JS</span>
+                    <span style="color: #2980b9">CSS</span>;
+                </h2>
+                <p class="textCenter">
+                    It may look like I'm bad at some things, but don't worry, I learn quickly and willingfully!! <br>
+                    Also I lied to you...Behind this text in background is written "&lt;h1&gt;" but it's actually
+                    &lt;h2&gt;... Sorry for that one! Like, for real!
+                </p>
+            </div>
         </div>
     </div>
-    <div class="main child todo "  data-todo="Change HTML CSS JS to icons">
-        <div>
-            <h2 class="charBefore textCenter" data-char="<h1>">
-                What you just saw is my representation of skills in:
-                <br>
-                <span  style="color: #e67e22">HTML</span>
-                <span  style="color: #f1c40f">JS</span>
-                <span  style="color: #2980b9">CSS</span>;
-            </h2>
-            <p class="textCenter">
-                It may look like I'm bad at some things, but don't worry, I learn quickly and willingfully!! <br>
-                Also I lied to you...Behind this text in background is written "&lt;h1&gt;" but it's actually &lt;h2&gt;... Sorry for that one! Like, for real!
-            </p>
-        </div>
-    </div>
-    </div>
 
 
-    
+
 </body>
 
 </html>
