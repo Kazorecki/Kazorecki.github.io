@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./css/loader.css">
     <link rel="stylesheet" href="./css/btns.css">
     <script src="./js/libraries/anime.min.js"></script>
+    <script src="./js/background.js" defer></script>
     <script src="./js/script.js"></script>
 </head>
 
@@ -44,7 +45,9 @@
         </div>
     </div>
 
-    <div class="snapContainer">
+
+
+    <div class="snapContainer" id="scroll">
         <div class="navbarOffset scrollSnap"></div>
         <header class="menu">
             <input type="checkbox" id="menuBtn">
@@ -143,15 +146,23 @@
             <div class="center">
                 <svg width="150" height="150" viewBox="0 0 131 114" fill="none" xmlns="http://www.w3.org/2000/svg"
                     id="skillChart">
-                    <path d="M66 0L130.952 112.5H1.0481L66 0Z" fill="#4A4A4A" id="skillChartTriangle1" />
-                    <path d="M66.5 26L109.368 100.25H23.6317L66.5 26Z" fill="#C4C4C4" id="skillChartTriangle2" />
-                    <path d="M67 51L88.6506 88.5H45.3494L67 51Z" fill="white" id="skillChartTriangle3" />
-                    <polygon points="3,111  66.5,28 90,89" stroke="black" stroke-width="3" id="skillChartStroke" />
+                    <path d="M66 0L130.952 112.5H1.0481L66 0Z" fill="#d35400" id="skillChartTriangle1" />
+                    <path d="M66.5 26L109.368 100.25H23.6317L66.5 26Z" fill="#e67e22" id="skillChartTriangle2" />
+                    <path d="M67 51L88.6506 88.5H45.3494L67 51Z" fill="#df9d64" id="skillChartTriangle3" />
+                    <polygon points="3,111  66.5,28 90,89" stroke="#fff" stroke-width="3" id="skillChartStroke" />
                 </svg>
 
             </div>
         </div>
-        <div class="main child todo " data-todo="Change HTML CSS JS to icons">
+
+
+
+
+
+
+
+
+        <div class="main child todo " data-todo="Change HTML CSS JS to icons" data-scroll="right">
             <div>
                 <h2 class="charBefore textCenter" data-char="<h1>">
                     What you just saw is my representation of skills in:
@@ -167,8 +178,18 @@
                 </p>
             </div>
         </div>
+
+
+
+
+        <div class="main child todo " data-todo="game" data-scroll="">
+            <div class="center">
+                <img src="" alt="">
+            </div>
+        </div>
     </div>
 
+    
 
 
 </body>

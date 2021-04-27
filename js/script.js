@@ -33,61 +33,71 @@ window.onload = function () {
 
 
 
-    var skillChartAnimation = anime({
-        targets: "#skillChartStroke",
-        points: [
-            { value: '3,111  66.5,28 90,89' },
-            { value: '66.5,28  90,89 3,111' },
-        ],
-        easing: 'easeOutQuad',
-        duration: 2000,
-        loop: true
-    })
 
 
+
+
+    var skillChartObj = {
+        first: { value: '3,111  66.5,28 90,89' },
+        second: { value: '66.5,28  90,89 3,111' }
+    }
+
+
+    function skillChartAnime(){
+        anime({
+            targets: "#skillChartStroke",
+            points: [
+                skillChartObj.first,
+                skillChartObj.second
+            ],
+            easing: 'easeOutQuad',
+            duration: 2000,
+            complete: skillChartAnime
+        })
+    }
+
+    skillChartAnime();
 
     // TODO REMOVE ANIMATION BEFORE STARTING NEXT ONE!!! (causes bugs)
 
 
 
     document.querySelector("#skillHTML").addEventListener("click", () => {
-        skillChartAnimation.remove('#skillChartStroke');
-        skillChartAnimation = anime({
-            targets: "#skillChartStroke",
-            points: [
-                { value: '3,111  66.5,28 90,89' },
-                { value: '66.5,28  90,89 3,111' },
-            ],
-            easing: 'easeOutQuad',
-            duration: 2000,
-            loop: true
-        })
+        document.querySelector("#skillChartTriangle1").style.fill = "#d35400";
+        document.querySelector("#skillChartTriangle2").style.fill = "#e67e22";
+        document.querySelector("#skillChartTriangle3").style.fill = "#df9d64";
+        
+        skillChartObj = {
+            first: { value: '3,111  66.5,28 90,89' },
+            second: { value: '66.5,28  90,89 3,111' }
+        }
+        
     })
     document.querySelector("#skillCSS").addEventListener("click", () => {
-        skillChartAnimation.remove('#skillChartStroke');
-        skillChartAnimation = anime({
-            targets: "#skillChartStroke",
-            points: [
-                { value: '100,111  50.5,28 0,89' },
-                { value: '0,89  100,111 50.5,28' },
-            ],
-            easing: 'easeOutQuad',
-            duration: 2000,
-            loop: true
-        })
+        document.querySelector("#skillChartTriangle1").style.fill = "#2980b9";
+        document.querySelector("#skillChartTriangle2").style.fill = "#3498db";
+        document.querySelector("#skillChartTriangle3").style.fill = "#6aa8d1";
+        
+        skillChartObj = {
+            first: { value: '100,111  50.5,28 0,89' },
+            second: { value: '0,89  100,111 50.5,28' }
+        }
+
+
+
+
+        
+        
     })
     document.querySelector("#skillJS").addEventListener("click", () => {
-        skillChartAnimation.remove('#skillChartStroke');
-        skillChartAnimation = anime({
-            targets: "#skillChartStroke",
-            points: [
-                { value: '100,111  50.5,28 0,89' },
-                { value: '0,89  100,111 50.5,28' },
-            ],
-            easing: 'easeOutQuad',
-            duration: 2000,
-            loop: true
-        })
+        document.querySelector("#skillChartTriangle1").style.fill = "#f39c12";
+        document.querySelector("#skillChartTriangle2").style.fill = "#f1c40f";
+        document.querySelector("#skillChartTriangle3").style.fill = "#f0d97d";
+        
+        skillChartObj = {
+            first: { value: '100,111  50.5,28 0,89' },
+            second: { value: '0,89  100,111 50.5,28' }
+        }
     })
 
 
@@ -118,12 +128,43 @@ window.onload = function () {
     hoverBtns.forEach(e=>{
         console.log(e);
         e.addEventListener("mouseenter",()=>{
-            console.log("scale 4");
             cursor.classList.add("cursorScale");
         })
         e.addEventListener("mouseleave",()=>{
-            console.log("scale 4");
             cursor.classList.remove("cursorScale");
         })
     })
+
+
+
+
+
+    let dataScroll = document.querySelectorAll("[data-scroll]");
+
+    dataScroll.forEach(obj => {
+        let rect = obj.getBoundingClientRect();
+        document.querySelector("#scroll").addEventListener("scroll", ()=>{
+            onScreen(rect.top, obj);
+        })
+
+    })
+
+
 }
+
+
+
+
+
+function onScreen(elYTop, obj){
+    if(document.querySelector("#scroll").scrollTop >= parseInt(elYTop) && document.querySelector("#scroll").scroll){
+        obj.classList.add("play")
+    }
+}
+
+// if(document.body.classList.contains = "scroll"){
+//     console.log("scroll");
+// }else if(obj.dataset.scroll != ""){
+//     document.body.classList.add("scroll");
+//     document.body.classList.add("scrollSide" + obj.dataset.scroll);
+// }
